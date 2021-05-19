@@ -1,13 +1,22 @@
 assembly-informational-format: '{InformationalVersion}'
 mode: Mainline
 increment: Inherit
-continuous-delivery-fallback-tag: ''
+continuous-delivery-fallback-tag: 'rc'
 tag-prefix: '[vV]'
 major-version-bump-message: '(breaking|major):'
 minor-version-bump-message: '(feature|minor):'
 patch-version-bump-message: '(fix|patch):'
 commit-message-incrementing: Enabled
-PreReleaseTag: 'rc'
+  main:
+    regex: ^master$|^main$
+    mode: ContinuousDelivery
+    tag: 'rc'
+    increment: Patch
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: false
+
 
 
 
