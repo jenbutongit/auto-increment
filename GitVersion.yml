@@ -8,6 +8,7 @@ minor-version-bump-message: '(feature|minor):'
 patch-version-bump-message: '(fix|patch):'
 commit-message-incrementing: Enabled
 PreReleaseLabel: "rc"
+assembly-file-versioning-format: '{Major}.{Minor}.{Patch}-{PreReleaseLabel}'
 
 
 
